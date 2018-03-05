@@ -28,7 +28,7 @@
   console.log('loaded!')
 ```
 
-- touch index.html
+- touch index.html (index.html should be located at the root of your project)
 - paste:
 ```
 <!DOCTYPE html>
@@ -53,29 +53,32 @@ Wootz! Your app is loaded.  Check the chrome console to see that your javascript
 
 - npm i --save-dev css-loader style-loader url-loader babel-core babel-loader babel-preset-es2015
 
-- edit webpack.config.js
+- edit webpack.config.js.  add a new object to the structure exported from the file
 ```
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.js$/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['es2015', { modules: false }]
-            ]
-          }
-        }]
-      },
-    ]
+  module.exports = {
+    ... ,
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
+        },
+        {
+          test: /\.js$/,
+          use: [{
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['es2015', { modules: false }]
+              ]
+            }
+          }]
+        },
+      ]
+    }
   }
 ```
 
