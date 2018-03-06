@@ -1,2 +1,2 @@
 require('../css/main.css');
-console.log('loaded.  dopeness.');
+console.log('loaded.  dopeness!');

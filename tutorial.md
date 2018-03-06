@@ -1,16 +1,26 @@
 ## JS Tooling Lab
 
 - npm init
-- npm install --save-dev webpack webpack-cli
+- npm install --save-dev webpack webpack-cli html-webpack-plugin
 - touch webpack.config.js
 - paste:
 ```
+  const path = require('path')
+  const webpack = require('webpack')
+  const HtmlWebpackPlugin = require('html-webpack-plugin')
+
   module.exports = {
     entry: './src/js/app.js',
     output: {
       path: __dirname + '/dist',
       filename: 'bundle.js'
-    }
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'My App',
+        template: 'index.html'
+      })
+    ]
   }
 ```
 
@@ -34,8 +44,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>I Can Haz Cheeseburger?</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <div class="container">
@@ -61,6 +71,7 @@ Wootz! Your app is loaded.  Check the chrome console to see that your javascript
       rules: [
         {
           test: /\.css$/,
+          include: path.resolve(__dirname, "src"),
           use: [
             'style-loader',
             'css-loader'
@@ -68,6 +79,7 @@ Wootz! Your app is loaded.  Check the chrome console to see that your javascript
         },
         {
           test: /\.js$/,
+          include: path.resolve(__dirname, "src"),
           use: [{
             loader: 'babel-loader',
             options: {
