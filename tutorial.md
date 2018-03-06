@@ -114,6 +114,5 @@ We've built the site for production.  For development, we want a dev server that
   require('../css/main.css');
 ```
 
-- rerun npm run build
-- reload page
+- watch the page reload
 - hey your css is there!
