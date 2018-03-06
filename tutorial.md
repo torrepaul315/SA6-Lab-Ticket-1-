@@ -66,7 +66,8 @@ We've built the site for production.  For development, we want a dev server that
 
 - npm start
 - open localhost:8080
-- Looks the same right?  Now try changing something in your js or html file.  Watch the site auto recompile & reload.  neat right!
+
+Looks the same right?  Now try changing something in your js or html file.  Watch the site auto recompile & reload.  neat right!
 
 - npm i --save-dev css-loader style-loader url-loader babel-core babel-loader babel-preset-es2015
 
