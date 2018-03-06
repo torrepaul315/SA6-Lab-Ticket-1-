@@ -1,7 +1,7 @@
 ## JS Tooling Lab
 
 - npm init
-- npm install --save-dev webpack webpack-cli html-webpack-plugin
+- npm install --save-dev webpack webpack-cli html-webpack-plugin webpack-dev-server
 - touch webpack.config.js
 - paste:
 ```
@@ -28,7 +28,9 @@
 ```
   "scripts": {
     ...
-    "build": "webpack --watch"
+    "start": "webpack-dev-server --inline --content-base ./dist --env development",
+    "build": "webpack --env production",
+    "build:dev": "webpack --env development"
   }
 ```
 
@@ -51,15 +53,20 @@
     <div class="container">
       Hello World!
     </div>
-    <script src="./dist/bundle.js"></script>
   </body>
 </html>
 ```
 
 - npm run build
-- open index.html
+- open dist/index.html
 
-Wootz! Your app is loaded.  Check the chrome console to see that your javascript executed.
+Wootz! Your app is loaded.  Check the chrome console to see that your javascript executed.  Check out the "./dist" folder to see what was generated. Just upload the dist folder to a hosting site like S3 and you're good to go.
+
+We've built the site for production.  For development, we want a dev server that automatically reloads when we make changes.  Try this:
+
+- npm start
+- open localhost:8080
+- Looks the same right?  Now try changing something in your js or html file.  Watch the site auto recompile & reload.  neat right!
 
 - npm i --save-dev css-loader style-loader url-loader babel-core babel-loader babel-preset-es2015
 
