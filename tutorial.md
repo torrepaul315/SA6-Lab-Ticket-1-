@@ -1,6 +1,6 @@
 ## JS Tooling Lab
 
-- npm init
+- npm init -y
 - npm install --save-dev webpack webpack-cli html-webpack-plugin webpack-dev-server
 - touch webpack.config.js
 - paste:
@@ -29,8 +29,8 @@
   "scripts": {
     ...
     "start": "webpack-dev-server --inline --content-base ./dist --env development",
-    "build": "webpack --env production",
-    "build:dev": "webpack --env development"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
   }
 ```
 
