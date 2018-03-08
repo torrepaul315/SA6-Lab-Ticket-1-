@@ -117,3 +117,17 @@ Looks the same right?  Now try changing something in your js or html file.  Watc
 
 - watch the page reload
 - hey your css is there!
+
+Lastly, this is how to split your code into multiple files using export syntax:
+
+utils.js
+```
+  export const message = "Hello from another file";
+```
+
+app.js
+```
+  import message from utils;
+
+  console.log(message);
+```
