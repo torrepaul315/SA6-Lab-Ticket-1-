@@ -131,3 +131,43 @@ app.js
 
   console.log(message);
 ```
+
+**BONUS**
+Include a JS library like React.js
+```
+npm i --save react react-dom
+```
+
+edit your app.js
+```
+import App from ./src/app;
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+create a basic function
+```
+export App = () => {
+  return <div>hi!</div>
+}
+```
+
+it should work!  Now refactor your app to be a stateful class:
+```
+import React, { Component } from 'react';
+
+class App extends Component {
+  state = {
+    message: 'wuttup yallz'
+  }
+
+  render() {
+    return (
+      <div>
+          {this.state.message}
+      </div>
+    );
+  }
+}
+
+export default App;
+```
