@@ -1,3 +1,13 @@
+backlog:
+adjust
+
+
+for fun, make the go button a picture!
+
+
+//<i class="ion-search"/>
+
+
 ## JS Tooling Lab
 
 - npm init -y

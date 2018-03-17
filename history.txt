@@ -1,0 +1,500 @@
+  128  node EJSChapter4.js 
+  129  node EJSChapter4.js 
+  130  node EJSChapter4.js 
+  131  node EJSChapter4.js 
+  132  node EJSChapter4.js 
+  133  ls
+  134  touch EJSChapter4_Q2.js 
+  135  ls
+  136  node EJSChapter4_Q2.js 
+  137  node EJSChapter4_Q2.js 
+  138  node EJSChapter4_Q2.js 
+  139  node EJSChapter4_Q2.js 
+  140  node EJSChapter4_Q2.js 
+  141  node EJSChapter4_Q2.js 
+  142  node EJSChapter4_Q2.js 
+  143  node EJSChapter4_Q2.js 
+  144  node EJSChapter4_Q2.js 
+  145  node EJSChapter4_Q2.js 
+  146  node EJSChapter4_Q2.js 
+  147  node EJSChapter4_Q2.js 
+  148  node EJSChapter4_Q2.js 
+  149  node EJSChapter4_Q2.js 
+  150  node EJSChapter4_Q2.js 
+  151  node EJSChapter4_Q2.js 
+  152  node EJSChapter4_Q2.js 
+  153  ls
+  154  cd ..
+  155  ls
+  156  cd documents
+  157  cd SL_Internal_org_work/
+  158  ls
+  159  git status
+  160  cd slint
+  161  git status
+  162  git add .
+  163  git commit -am "refactored triggerhandlerclass"
+  164  git push 
+  165  ls
+  166  cd documents
+  167  ls
+  168  cd AtomProjects/
+  169  ls
+  170  node EJSChapter4_Q2.js
+  171  ls
+  172  cd documents
+  173  ls
+  174  cd AtomProjects/
+  175  ls
+  176  node EJSChapter4_Q2.js 
+  177  node EJSChapter4_Q2.js 
+  178  node EJSChapter4_Q2.js 
+  179  node EJSChapter4_Q2.js 
+  180  node EJSChapter4_Q2.js 
+  181  node EJSChapter4_Q2.js 
+  182  node EJSChapter4_Q2.js 
+  183  node EJSChapter4_Q2.js 
+  184  node EJSChapter4_Q2.js 
+  185  node EJSChapter4_Q2.js 
+  186  node EJSChapter4_Q2.js 
+  187  node EJSChapter4_Q2.js 
+  188  node EJSChapter4_Q2.js 
+  189  node EJSChapter4_Q2.js 
+  190  ls
+  191  touch EJSChapter4_Q3.js
+  192  touch EJSChapter4_Q3.js
+  193  ls
+  194  node EJSChapter4_Q3.js
+  195  node EJSChapter4_Q3.js
+  196  node EJSChapter4_Q3.js
+  197  node EJSChapter4_Q3.js
+  198  node EJSChapter4_Q3.js
+  199  node EJSChapter4_Q3.js
+  200  node EJSChapter4_Q3.js
+  201  node EJSChapter4_Q3.js
+  202  node EJSChapter4_Q3.js
+  203  node EJSChapter4_Q3.js
+  204  node EJSChapter4_Q3.js
+  205  node EJSChapter4_Q3.js
+  206  node EJSChapter4_Q3.js
+  207  node EJSChapter4_Q3.js
+  208  node EJSChapter4_Q3.js
+  209  node EJSChapter4_Q3.js
+  210  node EJSChapter4_Q3.js
+  211  node EJSChapter4_Q3.js
+  212  node EJSChapter4_Q3.js
+  213  node EJSChapter4_Q3.js
+  214  node EJSChapter4_Q3.js
+  215  node EJSChapter4_Q3.js
+  216  node EJSChapter4_Q3.js
+  217  node EJSChapter4_Q3.js
+  218  ls
+  219  touch EJSChapter4_Q4.js
+  220  node EJSChapter4_Q3.js
+  221  node EJSChapter4_Q3.js
+  222  node EJSChapter4_Q3.js
+  223  EJSChapter4_Q3.js
+  224  node EJSChapter4.js
+  225  node EJSChapter4_Q2.js
+  226  ls
+  227  cd ..
+  228  ls
+  229  cd AtomProjects/
+  230  ls
+  231  mkdir Eloquent_JavaScript
+  232  ls
+  233  ls
+  234  cd Eloquent_JavaScript/
+  235  ls
+  236  mkdir Chapter_5
+  237  cd Chapter_5/
+  238  ls
+  239  touch Chapter5_notes
+  240  ls
+  241  atom .
+  242  ls
+  243  node Chapter_5_notes.js 
+  244  node Chapter_5_notes.js 
+  245  node Chapter_5_notes.js 
+  246  node Chapter_5_notes.js 
+  247  node Chapter_5_notes.js 
+  248  node Chapter_5_notes.js 
+  249  node Chapter_5_notes.js 
+  250  node Chapter_5_notes.js 
+  251  node Chapter_5_notes.js 
+  252  ls
+  253  cd ..
+  254  ls
+  255  node Chapter_3.js 
+  256  node Chapter_3.js 
+  257  node Chapter_3.js 
+  258  node Chapter_3.js 
+  259  node Chapter_3.js 
+  260  node Chapter_3.js 
+  261  node Chapter_3.js 
+  262  node Chapter_3.js 
+  263  node Chapter_3.js 
+  264  node Chapter_3.js 
+  265  node Chapter_3.js 
+  266  node Chapter_3.js 
+  267  ls
+  268  node Chapter_5/Q1.js
+  269  node Chapter_5/Q1.js
+  270  cd Chapter_5
+  271  ls
+  272  node Q1.js
+  273  node Q1.js
+  274  node Q1.js
+  275  node Q1.js
+  276  node Q1.js
+  277  node Q1.js
+  278  node Q1.js
+  279  node Q1.js
+  280  node Q1.js
+  281  node Q1.js
+  282  node Q1.js
+  283  node Q1.js
+  284  node Q1.js
+  285  node Q1.js
+  286  node Q1.js
+  287  node Q1.js
+  288  node Q1.js
+  289  node Q1.js
+  290  node Q1.js
+  291  node Q1.js
+  292  node Q1.js
+  293  node Q1.js
+  294  node Q1.js
+  295  node Q1.js
+  296  node Q2.js
+  297  node Q2.js
+  298  node Q2.js
+  299  node Q2.js
+  300  node Q2.js
+  301  node Q2.js
+  302  node Q2.js
+  303  node Q2.js
+  304  node Q2.js
+  305  node Q2.js
+  306  node Q2.js
+  307  node Q2.js
+  308  node Q2.js
+  309  node Q2.js
+  310  node Q2.js
+  311  node Q2.js
+  312  node Q2.js
+  313  node Q2.js
+  314  node Q2.js
+  315  node Q2.js
+  316  node Q2.js
+  317  node Q2.js
+  318  node Q2.js
+  319  node Q2.js
+  320  node Q2.js
+  321  node Q2.js
+  322  ls
+  323  cd Documents/
+  324  ls
+  325  cd AtomProjects/
+  326  ls
+  327  cd Eloquent_JavaScript/
+  328  ls
+  329  cd Chapter_5/
+  330  ls
+  331  node Q2.js
+  332  ls
+  333  cd Documents
+  334  ls
+  335  SA6_Work\ /
+  336  ls
+  337  cd SA6_Work\ /
+  338  ls
+  339  cd paulyfullstack/
+  340  ls
+  341  cd git status
+  342  cd..
+  343  ls
+  344  cd..
+  345  cd ..
+  346  ls
+  347  cd ..
+  348  ls
+  349  cd localsfrepos/
+  350  ls
+  351  ls
+  352  cd ..
+  353  cd SA6_Work
+  354  ls cd ..
+  355  cd ..
+  356  ls
+  357  cd Documents
+  358  ls
+  359  cd SA6_Work\ /
+  360  ls
+  361  cd paulyfullstack/
+  362  ls
+  363  cd src
+  364  ls
+  365  cd classes
+  366  ls
+  367  cd ..
+  368  ls
+  369  cd ..
+  370  ls
+  371  cd ..
+  372  ls
+  373  mkdir Data_Int_Superbadge
+  374  ls
+  375  cd Data_Int_Superbadge/
+  376  ls
+  377  git init 
+  378  git status 
+  379  git add .
+  380  ls
+  381  git status
+  382  git add .
+  383  git remote -v
+  384  git remote git remote set-url originhttps://bitbucket.org/silverline/paulyfullstack/src/master/
+  385  git remote set-url originhttps://bitbucket.org/silverline/paulyfullstack/src/master/
+  386  git remote -v 
+  387  git remote set-url origin https://bitbucket.org/silverline/paulyfullstack/src/master/
+  388  git remote set-url --add https://bitbucket.org/silverline/paulyfullstack/src/master/
+  389  git remote -v origin
+  390  git remote set-url origin git@bitbucket.org:silverline/paulyfullstack/src/master.git
+  391  git remote -v
+  392  git remote -v origin
+  393  git remote set-url ssh://git@bitbucket.org:silverline/paulyfullstack.git
+  394  git remote -v
+  395  git remote set-url --add ssh://git@bitbucket.org:silverline/paulyfullstack.git
+  396  git status
+  397  git commit -am 'commit of work for Data Integration Superbadge'
+  398  git status
+  399  git remote -v
+  400  git remote add orign git remote add origin git@bitbucket.org:silverline/paulyfullstack.git
+  401  git remote add origin git@bitbucket.org:silverline/paulyfullstack.git
+  402  git remote -v
+  403  git push 
+  404  git push --set-upstream origin master
+  405  git branch -v
+  406  ls
+  407  pwd
+  408  cd ..
+  409  ls
+  410  cd paulyfullstack/
+  411  ls
+  412  git status
+  413  git add .
+  414  git commit -am 'committed all of my work on the data int superbadge'
+  415  git remote -v
+  416  git push 
+  417  ls
+  418  curl https://bitbucket.org/silverline/mikewilliams/raw/5eb2c96124e97d7dc4a4b6c2234cb4da3faa0ba3/EJS/.eslintrc >> ~/.eslintrc
+  419  https://bitbucket.org/silverline/mikewilliams/raw/5eb2c96124e97d7dc4a4b6c2234cb4da3faa0ba3/EJS/.eslintrc >> ~/.eslintrc
+  420  curl https://bitbucket.org/silverline/mikewilliams/raw/5eb2c96124e97d7dc4a4b6c2234cb4da3faa0ba3/EJS/.eslintrc >> ~/.eslintrc
+  421  npm install --save-dev webpack webpack-cli html-webpack-plugin webpack-dev-server
+  422  ls
+  423  webpack.config.js
+  424  touch webpack.config.js
+  425  ls
+  426  atom webpack.config.js 
+  427  ls
+  428  cd Documents
+  429  ls
+  430  touch JS_with_Doug
+  431  ls
+  432  cd JS_with_Doug 
+  433  ls
+  434  rm JS_with_Doug 
+  435  ls
+  436  mkdir JS_with_Doug
+  437  ls
+  438  cd JS_with_Doug/
+  439  ls
+  440  npm init -y
+  441  atom .
+  442  touch webpack.config.js
+  443  touch/js/app.js
+  444  touch src/js/app.js
+  445  ls
+  446  src/js/app.js
+  447  touch src
+  448  mkdir src
+  449  cd src
+  450  ls
+  451  mkdir js
+  452  cd js
+  453  ls
+  454  touch app.js
+  455  ls
+  456  npm run build
+  457  npm install --save-dev webpack webpack-cli html-webpack-plugin webpack-dev-server
+  458  npm run build
+  459  open dist/index.html
+  460  ls
+  461  cd ..
+  462  cd ..
+  463  ls
+  464  npm run build
+  465  ls
+  466  cd ..
+  467  ls
+  468  cd JS_with_Doug/
+  469  ls
+  470  npm run build
+  471  npm run build
+  472  ls
+  473  open dist/index.html
+  474  npm start 
+  475  npm i --save-dev css-loader style-loader url-loader babel-core babel-loader babel-preset-es2015
+  476  ls
+  477  touch src/css/main.css
+  478  cd src
+  479  ls
+  480  touch css/main.css
+  481  mkdir css
+  482  ls
+  483  touch css/main.css
+  484  ls
+  485  cd css
+  486  ls
+  487  pwd
+  488  cd ..
+  489  cd ..
+  490  npm stop
+  491  ls
+  492  npm run build
+  493  npm start
+  494  ls
+  495  mkdir followalong
+  496  ls
+  497  cd followalong
+  498  touch index
+  499  ls
+  500  atom 
+  501  ls
+  502  npm run build
+  503  npm run start 
+  504  npm run start 
+  505  npm run build
+  506  npm run start 
+  507  ls
+  508  cd ..
+  509  ls
+  510  cd JS_with_Doug/
+  511  git init
+  512  ls -la
+  513  touch .gitignore
+  514  git add .
+  515  git commit -am 'work on stuff for doug thus far'
+  516  git remote -v
+  517  git remote add origin git@bitbucket.org:silverline/paulyfullstack.git
+  518  git remote -v
+  519  git push 
+  520  git push --set-upstream origin master
+  521  git push --help
+  522  git push -ff
+  523  git push --set-upstream origin master -ff
+  524  ls
+  525  cd ..
+  526  ls
+  527  cd mkdir React_W_Doug
+  528  mkdir React_W_Doug
+  529  cd React_W_Doug/
+  530  ls
+  531  git init
+  532  git clone https://github.com/torrepaul315/StaticWebpack.git
+  533  git add .
+  534  git rm --cached StaticWebpack/
+  535  npm install
+  536  atom .
+  537  npm run
+  538  npm start
+  539  webpack 
+  540  npm run build
+  541  npm start
+  542  ls
+  543  cd staticWebpack
+  544  ls
+  545  npm run
+  546  npm start
+  547  npm run build
+  548  npm install
+  549  npm install --save-dev webpackserver
+  550  npm --save-dev webpack-dev-server
+  551  npm install --save-dev webpack-dev-server
+  552  npm run build
+  553  npm run build
+  554  npm install
+  555  npm run build
+  556  npm start
+  557  git add .
+  558  git status
+  559  npm install
+  560  npm run build
+  561  npm start
+  562  ls
+  563  pwd
+  564  npm start
+  565  npm start
+  566  npm run build
+  567  pwd
+  568  pwd
+  569  npm run build
+  570  npm install
+  571  npm install
+  572  ls
+  573  pwd
+  574  cd ..
+  575  ls
+  576  cd ..
+  577  ls
+  578  cd JS_with_Doug/
+  579  ls
+  580  npm start
+  581  npm install
+  582  npm run build
+  583  npm run build
+  584  npm run build
+  585  npm start
+  586  ls
+  587  cd ..
+  588  ls
+  589  cd JS_with_Doug
+  590  atom .
+  591  cd ../Whiteboard
+  592  ls
+  593  mkdir SA6LabTicket1Redo
+  594  cd SA6LabTicket1Redo/
+  595  ls
+  596  git status
+  597  git init
+  598  git clone https://github.com/realdoug/StaticWebpack.git
+  599  atom .
+  600  git remote -v
+  601  ls
+  602  cd StaticWebpack
+  603  ls
+  604  ls -la
+  605  git status
+  606  git remote add origin https://github.com/torrepaul315/SA6-Lab-Ticket-1-.git
+  607  git remote -v
+  608  git remote set-url origin https://github.com/torrepaul315/SA6-Lab-Ticket-1-.git
+  609  git remote -v
+  610  git push
+  611  git push
+  612  git branch -v
+  613  git checkout -b paulsWork
+  614  git checkout master
+  615  ls
+  616  git status
+  617  git commit -am 'first commit'
+  618  git status
+  619  git add .
+  620  git commit -am 'first commit'
+  621  git push 
+  622  ls
+  623  npm install
+  624  git status
+  625  npm start
+  626  ls 
+  627  history > history.txt

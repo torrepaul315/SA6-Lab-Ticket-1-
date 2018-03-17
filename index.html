@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel='stylesheet' type='text/css' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title><%= htmlWebpackPlugin.options.title %></title>
+
   </head>
   <body>
     <div class="container">
-      Hello Paul!
+      <div class="welcomeBanner">
+        Welcome To Paul's Guardian News Site! (v.2) yeah!
+      </div>
+      <div class="row-holder">
+        <div class="filler"></div>
+          <div class="search-box">
+            <i class="ion-search"></i>
+<!-- another enhancement....have the search icon show but then disappear as soon as the person starts typing! -->
+            <input class="text-box" id="text-box" placeholder="search away!">
+          </div>
+          <button class="go-button" id="go">GO!</button>
+        <div class="filler"></div>
+      </div>
+      <div class="row-holder" id="row-holder">
+        <div class="filler"></div>
+          <div class="resultsBox" id="searchTerms"></div>
+        <div class="filler"id="fillerEx"></div>
+      </div>
+      <div class="row-holder">
+        <div class="filler"></div>
+          <button class="go-button"         id="backButton">
+            Back
+          </button>
+        <div class="filler"></div>
+      </div>
+
+
+
     </div>
+    <script type="text/javascript" src="./src/js/app.js" async></script>
+
   </body>
 </html>
