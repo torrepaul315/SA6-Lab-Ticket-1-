@@ -146,27 +146,31 @@ function renderHtml(){
 function setPageButtons (){
   console.log('function entered');
   let buttonRow = document.getElementById("pageButtons");
+  buttonRow.innerHTML = "";
   let numOfButtons;
   if (currentPage + 10 <= totalNumOfPagesAvail) {
     numOfButtons = 9;
   } else {
     numOfButtons = totalNumOfPagesAvail - currentPage;
   }
-
   for (let y = currentPage + numOfButtons; y >= currentPage ;y--) {
 
-    let pageButton =`<button class="pageButton">Page ${y} </button>`;
+    let pageButton =`<button class="pageButton" id="${y}">Page ${y} </button>`;
     console.log(pageButton);
     buttonRow.insertAdjacentHTML('afterbegin',pageButton);
+    let pbListener = document.getElementById(`${y}`);
+    pbListener.addEventListener('click', function(){
+        let searchTerm = searchHistory[searchHistPos -1]
+
+        makeApiCall(searchTerm,this.id);
+    });
   }
-
-
-
-
-
 }
-
-
+//let pageButton = document.getElementById("pageButtons");
+//pageButton.addEventListener('click',function(){
+//  console.log("on!");
+//});
+  let searchTerm = searchHistory[searchHistPos -1]
 
 
 
