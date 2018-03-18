@@ -58,13 +58,14 @@ function addToTextSearchArray(eventInfo) {
   if (eventInfo === 'Backspace') {
   textBox.pop(eventInfo);
   } else if (eventInfo === 'Enter'){
-  populateResultField();
+  let searchTerm = textBox.join('');
+  scanForProhibitedSTerms(searchTerm);
   } else if (eventInfo === 'Shift'){
   }
   else {
     textBox.push(eventInfo);
   }
-  console.log(textBox.join(''));
+//  console.log(textBox.join(''));
 };
 //This is where add the term/fire off the query!
 let goButton = document.getElementById("go");
@@ -123,6 +124,8 @@ function setVariables(jsonResp) {
   currentPage = currentQueryResult.response.currentPage;
   totalNumOfPagesAvail = currentQueryResult.response.pages;
   renderHtml();
+  setPageButtons();
+
 }
 
 
@@ -136,9 +139,32 @@ function renderHtml(){
       textbox.insertAdjacentHTML('beforeend',articleTitle);
     }
 }
+//what do the page number buttons need to know reallY?
+//1- is the page number valid? because all it is really is the same function as forward/backward
+//the only other tricky part is the dom manipulation part ie getting that specific click...there are a couple of ways to do this
+
+function setPageButtons (){
+  console.log('function entered');
+  let buttonRow = document.getElementById("pageButtons");
+  let numOfButtons;
+  if (currentPage + 10 <= totalNumOfPagesAvail) {
+    numOfButtons = 9;
+  } else {
+    numOfButtons = totalNumOfPagesAvail - currentPage;
+  }
+
+  for (let y = currentPage + numOfButtons; y >= currentPage ;y--) {
+
+    let pageButton =`<button class="pageButton">Page ${y} </button>`;
+    console.log(pageButton);
+    buttonRow.insertAdjacentHTML('afterbegin',pageButton);
+  }
 
 
 
+
+
+}
 
 
 
