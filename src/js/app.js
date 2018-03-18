@@ -7,6 +7,19 @@ console.log('top of file');
 //another refactor-
 //Update the results box below automatically as the user types (without needing a button or enter key)
 
+/*
+steps left for ticket 2
+1- clean the results field when a new search is made OR a page up button is hit
+1.5 - forward and back buttons
+2 - refactor the query function to accept additional page # criteria
+3- you may want some sort of counter to avoid blank api calls, based off of the total or pages value from the first query?
+
+*/
+
+/*steps for ticket 3-
+create a checkbox or button for each result.  upon click, have a function that will take the content of that button ( you'll have the same button, so the click function will need to be able to view THAT click)
+and have that info pass into a results list rendered perhaps on the side
+*/
 
 let textBox = [];
 
@@ -14,15 +27,21 @@ let searchHistory =[];
 let searchHistPos = 0;
 //this works...predicated on all stop words being lowercase
 let stopWords = [ 'maga', 'trump', "mar-a-lago"];
-
 let errorScript = "This Search is Prohibited. Please use another term.";
 let errorMessage = errorScript.fontcolor("red");
 
+const guardianAPI = 'https://content.guardianapis.com/search?api-key';
+const apiKey ='39f2c2f4-1238-4b1c-90aa-cd948ea90bf6&q';
+let currentQueryResult;
+let currentPage = 1;
+let totalNumOfPagesAvail;
+
+//let totalPages = currentQueryResult.response.pages;
+
+//this is where I take the search term out
+
+//event listener first that pulls in each keystroke
 let elTake2 = document.getElementById("text-box");
-//console.log('element pulled', typeof elTake2, elTake2);
-
-
-
 elTake2.addEventListener('keyup',function(){
 
   if(event.key === " ") {
@@ -32,10 +51,9 @@ elTake2.addEventListener('keyup',function(){
     addToTextSearchArray(event.key);
   }
 });
-
+//function that evaluates the keystroke and any change that should have on the text box
 function addToTextSearchArray(eventInfo) {
   //not handling condition of a space, not sure if I need to either!
-
   //refactor into a ternary for f
   if (eventInfo === 'Backspace') {
   textBox.pop(eventInfo);
@@ -48,125 +66,141 @@ function addToTextSearchArray(eventInfo) {
   }
   console.log(textBox.join(''));
 };
-
+//This is where add the term/fire off the query!
 let goButton = document.getElementById("go");
-
 goButton.addEventListener('click',function(){
-
   let searchTerm = textBox.join('');
   scanForProhibitedSTerms(searchTerm);
 });
-
+//first, check if the term is on the prohibited search terms list
 function scanForProhibitedSTerms (sTerm) {
-  console.log(sTerm);
   // prohibited words check!
   if (stopWords.includes(sTerm.toLowerCase())) {
     document.getElementById('searchTerms').innerHTML = errorMessage;
-
-  //these two lines could be put into a helper function that said it's only two lines of code.....
+  //these two lines could be put into a hf 2 lines tho
     textBox = [];
     //reset the text field too!
     elTake2.value = '';
+
+
   } else {
-  populateResultField(sTerm);
+
+    //this is where I start my callout!
+  makeApiCall(sTerm, currentPage);
+  textBox = [];
+  console.log(textBox);
+  elTake2.value = '';
+  //this could also be a helper function methinks?
+  searchHistory.push(sTerm);
+  searchHistPos = searchHistory.length;
   }
 }
-
-//mmmk! once you get the div to be inserted into the dom, then try it via a different route....se the resultsbox as a blank div and insert/replace the content of that div with a string!
-
-//also....this was me mostly following an exapmple by wrote as opposted to understanding the underlying content/what it's doing....worth diving deeper into!
-function populateResultField(){
-   let searchTerm = textBox.join('')
-   console.log(searchTerm);
-/*
-   let newDiv = document.createElement('div');
-   let content= document.createTextNode(searchTerm);
-   newDiv.appendChild(content);
-   console.log(newDiv);
-   //let's see if this part works next! does it make it to the dom?
-   var currentDiv = document.getElementById("searchTerms");
-
-   var parentDiv = document.getElementById("row-holder");
-
-   parentDiv.insertBefore(newDiv, currentDiv.nextSibling);
-*/
-   let divToReplace = document.getElementById('searchTerms').innerHTML;
-   console.log("what we want to replace : " + divToReplace, typeof divToReplace);
-   divToReplace = searchTerm;
-   console.log(divToReplace);
-   //document.body.insertBefore(newDiv, currentDiv);
-   document.getElementById('searchTerms').innerHTML = searchTerm;
-   //reset your storage!
-   searchHistory.push(searchTerm);
-   console.log(searchHistory);
-   textBox = [];
-   searchHistPos = searchHistory.length;
-
-   //reset the text field too!
-   elTake2.value = '';
-
-   console.log(searchHistPos);
-
+//first build out the stuff that we will insert into the dom
+//then! refactor the render html function below
+function makeApiCall(input,page) {
+//you'll change this top part
+//  if (page === undefined) {
+//    page = currentPage;
+//  }
+  let apiKey ='39f2c2f4-1238-4b1c-90aa-cd948ea90bf6&q'
+    fetch(`${guardianAPI}=${apiKey}=${input}&page=${page}`)
+      .catch(function(err){
+        console.log(err);
+        alert(err);
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(jsonResp) {
+        setVariables(jsonResp);
+      });
 
 }
 
+function setVariables(jsonResp) {
+  currentQueryResult = jsonResp;
+  console.log(currentQueryResult, currentQueryResult.response.pages);
+  currentPage = currentQueryResult.response.currentPage;
+  totalNumOfPagesAvail = currentQueryResult.response.pages;
+  renderHtml();
+}
+
+
+function renderHtml(){
+    let results = currentQueryResult.response.results;
+    let textbox = document.getElementById("article");
+    textbox.innerHTML = "";
+    console.log(textbox, results);
+    for (let x = 0; x < results.length; x++){
+      let articleTitle = `<li class="articleLink"><a href=${results[x].webUrl} target="_blank">${results[x].webTitle}</a></li>`
+      textbox.insertAdjacentHTML('beforeend',articleTitle);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//this is where you let the person go back a search term result
 let BackButton = document.getElementById("backButton");
 
 BackButton.addEventListener('click',function(){
      goBack();
 });
-
+//go back and forward could be refactored into one function.....
 function goBack(){
-  console.log('clicked');
-    if (searchHistPos > 1) {
-        let backTerm = searchHistory[searchHistPos - 2];
-        console.log( 'your backTerm ' +backTerm);
-        document.getElementById('searchTerms').innerHTML = backTerm;
-        searchHistPos -= 1;
-      }
-    else {
-      alert("you are at the end of your search list");
+    if (currentPage > 1) {
+    let searchTerm = searchHistory[searchHistPos -1];
+    let pageNumber = currentPage - 1;
+    makeApiCall(searchTerm,pageNumber);
     }
-
+    else {
+      alert("you are at the beginning of your search list");
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-elTake2.addEventListener('click',function(){
-  logInRealTime();
+let forwardButton = document.getElementById("next10");
+forwardButton.addEventListener('click',function(){
+     next10();
 });
-
-function logInRealTime() {
-  console.log("event listener works!");
-};
-
-function fillText(textAdd) {
-   el.innerText = textAdd;
-   el.value = textAdd;
-
-   console.log(el);
+function next10() {
+  if (currentPage < totalNumOfPagesAvail) {
+  let searchTerm = searchHistory[searchHistPos -1];
+  let pageNumber = currentPage + 1
+  makeApiCall(searchTerm,pageNumber);
+  }
+  else {
+    alert("you've reached the end of the available search results")
+  }
 }
 
-fillText("lets see if this worked!");
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log("bottom of file");
